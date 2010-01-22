@@ -1,0 +1,16 @@
+$def with (images)
+
+<h1>Yo,Dawg</h1>
+<h3>Upload new image</h3>
+<form method="post" enctype="multipart/form-data" action="add">
+  <input type="file" name="myfile" />
+  <input type="submit" value="Upload" />
+</form>
+<h3>Images so far:</h3>
+<ul>
+$if len(images) != 0:
+    $for image in images:
+        <li id="t$image.ID">$image.FileName</li>
+$else:
+    <li>(None)</li>
+</ul>

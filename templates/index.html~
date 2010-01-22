@@ -1,0 +1,6 @@
+$def with (data)
+
+$if data:
+<h1>Yo,$data.name</h1>
+$else:
+<h1>Who are you?</h1>
