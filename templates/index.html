@@ -10,7 +10,7 @@ $def with (images)
 <ul>
 $if len(images) != 0:
     $for image in images:
-        <li id="t$image.ID">$image.FileName</li>
+        <li id="t$image.ID"><a href="/$image.ID">$image.ID</a></li>
 $else:
     <li>(None)</li>
 </ul>
